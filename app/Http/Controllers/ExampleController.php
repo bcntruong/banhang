@@ -3,14 +3,31 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
+use App\Loai;
+use App\SanPham;
 class ExampleController extends Controller
 {
+    public function getDanhSachLoai(){
+        $danhsachloai = Loai::all();
+        
+        return view('page.danhsachloai')
+        ->with('ds_loai', $danhsachloai);
+    }
+    public function getDanhSachSanPham(){
+        $danhsachsp = SanPham::all();
+        
+        return view('page.danhsachsanpham')
+        ->with('ds_sp', $danhsachsp);
+    }
     public function xinchao(){
+        
+        $data_all = Loai::all();
+        print_r($data_all);
         $hoten = 'Biện Công Nhựt Trường';
         $masv = '1111358';
         $dadangnhap = 0;
         $gioitinh = 1;
+        
         $dulieumauJSON = <<<EOT
         [{
             "id": 1,
@@ -67,4 +84,5 @@ EOT;
             ->with('maso',$masv)
                 ;
     }
+    
 }

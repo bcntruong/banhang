@@ -64,7 +64,7 @@ return [
     |
     */
 
-    'timezone' => 'UTC',
+    'timezone' => 'Asia/Ho_Chi_Minh',
 
     /*
     |--------------------------------------------------------------------------
@@ -227,5 +227,6 @@ return [
         'View' => Illuminate\Support\Facades\View::class,
 
     ],
-
+    
+    'pagelimit' => 20,
 ];
