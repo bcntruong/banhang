@@ -1,5 +1,7 @@
 <?php
 
+
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -11,9 +13,9 @@
 |
 */
 
-//Route::get('/', function () {
-//    return view('welcome');
-//});
+Route::get('/', function () {
+    return view('frontend.index');
+});
 
 //Route::get('/','Backend\LoaiController@index')->name('admin.loai.index');
 //Route::get('/hello','ExampleController@xinchao');
